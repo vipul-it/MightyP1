@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 .logo-size {
     width: 100px !important;
     height: 70px !important;
@@ -35,7 +41,7 @@
     color: white !important;
 }
 
-.bottom-hr{
+.bottom-hr {
     border-bottom: 0.5px solid rgb(189, 180, 180) !important;
 }
 
@@ -44,3 +50,86 @@
     background-position: center;
     opacity: rgba(255, 255, 255, 0.639) !important;
 } */
+
+.register-btn {
+    margin-left: 260px !important;
+
+}
+
+.register-input {
+    padding: 13px 20px !important;
+    width: 400px !important;
+}
+
+.loud-bg {
+    width: 200px !important;
+}
+
+.card-img-top {
+    width: 40px !important;
+}
+
+.card-main {
+    border: none !important;
+    padding: 10px !important;
+}
+
+.ads-main {
+    background-color: var(--primary-color);
+}
+
+.ads-btn {
+    font-size: small !important;
+}
+
+/* carousel */
+
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 40px 20px 37px;
+    text-align: center
+}
+
+.counter-box p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: #909090;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.counter-box i {
+    font-size: 30px;
+    margin: 0 0 15px;
+    color: rgb(241, 197, 135)
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #666;
+    line-height: 28px
+}
+
+.counter-box.colored {
+    background: var(--primary-color)
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+    color: #fff
+}
+
+/* newsletter  */
+.newslater-main {
+    background-color: var(--primary-color);
+}
+.solid-btn-news {
+    border: 1px solid var(--primary-color) !important;
+    background-color: var(--primary-color);
+    color: black !important;
+}
