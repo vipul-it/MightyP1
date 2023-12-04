@@ -1,0 +1,32 @@
+.logo-size{
+    width: 100px !important;
+    height: 70px !important;
+}
+
+:root {
+    --primary-color: #FFBE50; 
+    --primaryred-color: #E66526; 
+    --font-size-base: 16px;   
+  }
+
+  .primary-color{
+    color: var(--primary-color)!important;
+  }
+  .out-line-btn{
+    border: 1px solid var(--primary-color)!important;
+    background: white !important;
+  }
+  :hover.out-line-btn{
+    border: 1px solid var(--primaryred-color) !important;
+    background: white !important;
+  }
+  .solid-btn{
+    border: 1px solid var(--primary-color) !important;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  :hover.solid-btn{
+    border: 1px solid var(--primaryred-color) !important;
+    background-color: var(--primaryred-color);
+    color: white;
+  }
