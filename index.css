@@ -1,9 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
+    :focus {
+        outline: none;
+    }
+
 }
+
+
+
+.bg-body {
+    height: 200px;
+}
+
 .logo-size {
     width: 100px !important;
     height: 70px !important;
@@ -22,6 +34,10 @@
 .out-line-btn {
     border: 1px solid var(--primary-color) !important;
     background: white !important;
+}
+
+.text-text {
+    color: #666;
 }
 
 :hover.out-line-btn {
@@ -45,33 +61,64 @@
     border-bottom: 0.5px solid rgb(189, 180, 180) !important;
 }
 
-/* .hero-bg{
+.hero-bg {
     background-image: url(./assets/page-02.png);
-    background-position: center;
-    opacity: rgba(255, 255, 255, 0.639) !important;
-} */
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    height: 70vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.922);
+}
+
+.content {
+    z-index: 100 !important;
+}
+
 
 .register-btn {
-    margin-left: 260px !important;
-
+    margin-left: 250px !important;
 }
 
 .register-input {
     padding: 13px 20px !important;
     width: 400px !important;
+    border: 1px solid #bdbdbd !important;
 }
 
+
+
 .loud-bg {
-    width: 200px !important;
+    margin-top: -70px !important;
+    width: 300px !important;
 }
 
 .card-img-top {
-    width: 40px !important;
+    width: 35px !important;
+    height: 35px;
 }
 
 .card-main {
     border: none !important;
-    padding: 10px !important;
+    padding: 20px !important;
+
+}
+
+.card-content {
+    font-size: smaller;
+}
+
+.ads-main-section {
+    margin-top: 100px !important;
 }
 
 .ads-main {
@@ -128,8 +175,118 @@
 .newslater-main {
     background-color: var(--primary-color);
 }
+
 .solid-btn-news {
     border: 1px solid var(--primary-color) !important;
     background-color: var(--primary-color);
     color: black !important;
 }
+
+.newslater-btn {
+    margin-left: 300px !important;
+    padding: 13px 20px !important;
+    border: black !important;
+
+}
+
+
+.top-newslater-input {
+    padding: 13px 20px !important;
+    width: 400px !important;
+    border: none !important;
+}
+
+.newslater-input {
+    padding-left: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid #666 !important;
+    padding: 10px 0 !important;
+    /* width: 400px !important; */
+}
+
+.footer-hr {
+    border-top: 1px solid #666 !important;
+    color: #666 !important;
+    font-size: small !important;
+
+}
+
+.social-icons {
+    border: 1px solid white !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+@media only screen and (min-width: 700px) {
+    .c-heading {
+        padding: 0 300px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .register-input {
+        width: 300px !important;
+    }
+
+    .register-btn {
+        margin-left: 150px !important;
+    }
+
+    .cfs {
+        font-size: smaller !important;
+    }
+
+    .newslater-btn {
+        margin-left: 150px !important;
+        border: black !important;
+
+    }
+
+    .top-newslater-input {
+
+        border: none !important;
+        /* border-bottom: 1px solid #666 !important; */
+        padding: 13px 5 !important;
+        width: 85% !important;
+    }
+
+    .get-in-touch {
+        margin-top: 30px !important;
+    }
+}
+
+ /* Custom styles for the left and right sides */
+
+  .carousel-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+  }
+  /* Customize navigator color */
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: rgb(79, 79, 79)!important;
+    z-index: 10;
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url(./assets/Path\ 139.png);
+    background-size: contain;
+}
+.carousel-control-next-icon {
+    background-image: url(./assets/Path\ 140.png);
+    background-size: contain;
+    
+}
+
+  /* Adjust layout for smaller screens */
+  @media (max-width: 767px) {
+    .carousel-inner .row {
+      flex-direction: column-reverse;
+    }
+  }

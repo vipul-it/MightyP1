@@ -30,3 +30,15 @@
     background-color: var(--primaryred-color);
     color: white;
   }
+
+   /* Custom styles for the left and right sides */
+   .carousel-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .carousel-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
