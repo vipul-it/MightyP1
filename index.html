@@ -27,13 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -42,7 +36,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-white fw-semibold bottom-hr">
         <div class="container">
-          <img class="logo-size" src="./assets/link.png" alt="logo" />
+          <img class="logo-size my-2" src="./assets/link-logo.png" alt="logo" />
           <!-- <a class="navbar-brand text-white" href="#">Navbar</a> -->
           <button
             class="navbar-toggler"
@@ -62,21 +56,26 @@
                   >Features</a
                 >
               </li>
-              <li class="nav-item me-2">
+              <li class="nav-item me-3">
                 <a class="nav-link nav-text" href="#">FAQ</a>
               </li>
-              <li class="nav-item me-2">
+              <li class="nav-item me-3">
                 <a class="nav-link nav-text" href="#">Resources</a>
               </li>
-              <li class="nav-item me-2">
+              <li class="nav-item me-3">
                 <a class="nav-link nav-text" href="#">Affliate program</a>
               </li>
-              <li class="nav-item me-2">
+              <li class="nav-item me-3">
                 <a class="nav-link nav-text" href="#">To Publisters</a>
               </li>
-              <li class="nav-item me-2">
+              <li class="nav-item me-3">
                 <form class="d-flex">
-                  <button class="px-3 py-2 me-2 out-line-btn" type="submit">
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    class="px-3 py-2 me-3 out-line-btn"
+                  >
                     Login
                   </button>
                   <button class="px-3 py-2 solid-btn" type="submit">
@@ -91,14 +90,101 @@
     </header>
 
     <main class="">
+      <!-- Model  -->
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="loginModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content rounded-0">
+            <div class="modal-header">
+              <h5 class="modal-title fw-semibold fs-4" id="loginModalLabel">
+                Login
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body px-5 py-3">
+              <form>
+                <div class="my-4">
+                  <input
+                    type="email"
+                    class="form-control fs-smaller py-3"
+                    id="recipient-email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="my-4">
+                  <input
+                    type="password"
+                    class="form-control fs-smaller py-3"
+                    id="recipient-pass"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label
+                      class="form-check-label fs-smaller"
+                      for="flexCheckChecked"
+                    >
+                      Keep me signed in by IP
+                    </label>
+                  </div>
+
+                  <div>
+                    <button
+                      type="button"
+                      class="btn btn-link text-decoration-none fs-6"
+                    >
+                      Sign Up
+                      <i
+                        class="fa-solid fa-chevron-right fa-beat fa-xs ms-1"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-login text-white">
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-link fs-smaller text-decoration-none"
+              >
+                Forget your password
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Hero Section  -->
       <section class="BannerSection hero-bg">
         <div class="overlay">
           <div class="container content">
-            <h1 class="text-center mt-5 text-capitalize">
+            <h1 class="text-center mt-5 text-capitalize fw-semibold">
               The world dolor sit amet consectetur.
             </h1>
-            <p class="text-center mt-1 cfs text-capitalize">
+            <p class="text-center cfs text-capitalize fw-semibold my-3">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non,
               pariatur.
             </p>
@@ -106,12 +192,12 @@
             <p class="d-flex justify-content-center align-items-center">
               <input
                 type="text"
-                class="position-relative register-input border-1 rounded-1"
+                class="position-relative fs-smaller register-input border-1 rounded-1"
                 id=""
                 placeholder="Your Website"
               />
               <button
-                class="px-3 py-2 solid-btn register-btn rounded-1 position-absolute"
+                class="px-3 py-2 solid-btn fs-6 fw-semibold register-btn rounded-1 fs-smaller position-absolute"
                 type="submit"
               >
                 Register Here
@@ -122,7 +208,7 @@
               <div class="">
                 <img
                   class="loud-bg"
-                  src="./assets/Loud.png"
+                  src="./assets/raket2.png"
                   alt="page"
                   style="width: 500px"
                 />
@@ -148,8 +234,8 @@
                 />
               </div>
               <div class="mt-3">
-                <h5 class="text-center">Speed Up</h5>
-                <p class="text-center card-content">
+                <h5 class="text-center fw-semibold">Speed Up</h5>
+                <p class="text-center card-content fw-medium">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Aliquam, in.
                 </p>
@@ -166,8 +252,8 @@
                 />
               </div>
               <div class="mt-3">
-                <h5 class="text-center">Tough Technologyup</h5>
-                <p class="text-center card-content">
+                <h5 class="text-center fw-semibold">Tough Technologyup</h5>
+                <p class="text-center card-content fw-medium">
                   Lorem ipsum dolor sit amet consectetur, voluptatibus aut
                 </p>
               </div>
@@ -183,8 +269,8 @@
                 />
               </div>
               <div class="mt-3">
-                <h5 class="text-center">Rock Effectiveness</h5>
-                <p class="text-center card-content">
+                <h5 class="text-center fw-semibold">Rock Effectiveness</h5>
+                <p class="text-center card-content fw-medium">
                   Lorem ipsum dolor sit amet consectetur, voluptatibus aut
                 </p>
               </div>
@@ -195,12 +281,14 @@
 
       <!-- ads section -->
       <section class="container ads-main-section">
-        <div class="ads-main rounded-3 p-5">
+        <div class="ads-main rounded-5 p-lg-5 p-3">
           <div class="row">
             <div class="col-lg-6 my-5">
-              <div class="my-5 mx-3">
-                <h2 class="">Lorem ipsum dolor, sit amet adipisicing elit.</h2>
-                <p class="card-text my-4">
+              <div class="my-lg-5 mx-lg-3">
+                <h2 class="fw-semibold">
+                  Lorem ipsum dolor, sit amet adipisicing elit.
+                </h2>
+                <p class="card-text my-4 fs-5 fw-medium">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Quasi molestiae totam qui rerum eveniet dicta in nemo aliquam
                   placeat numquam.
@@ -212,116 +300,116 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="d-flex justify-content-center align-items-center">
-                <img
-                  src="./assets/Rectangle 63.png"
-                  style="width: 300px; height: 400px"
-                  alt="Image"
-                />
+              <div
+                class="d-flex mt-lg-5 justify-content-center align-items-center"
+              >
+                <div class="embed-responsive embed-responsive-1by1">
+                  <iframe
+                    class="rounded-4 iframe-res"
+                    src="https://www.youtube.com/embed/73zHZbQ3LEo?si=n90KDa_AZyPcyTT3"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Quality Section -->
-      <section class="mt-5 container">
+      <section class="mt-5 container quality">
         <div>
-          <h2 class="my-2 text-center fs-3 raleway">
-            Excepturi hic eos maxime.
-          </h2>
-          <h2 class="my-2 text-center fs-3 raleway">
-            Lorem, ipsum dolor sit amet consectetu W adipisicing elit.
+          <h2 class="my-2 fs-3 fw-semibold raleway">
+            Demo Lorem, ipsum dolor sit amet consectetu Lorem, amet consectetu W
+            adipisicing elit.
           </h2>
         </div>
         <div class="row mt-4 g-lg-3 g-2">
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 7.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold">Quality Metrics</span>
             </span>
           </div>
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 1.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold">Backlink type</span>
             </span>
           </div>
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
                 src="./assets/Group 3.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold">Daily Payment</span>
             </span>
           </div>
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 5.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold">Large Base</span>
             </span>
           </div>
         </div>
-        <div class="row mt-4 g-lg-3 g-2">
+        <div class="row mt-lg-3 mt-1 g-lg-3 g-2 justify-content-around">
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 149.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold"
+                >High-Speed Placement</span
+              >
             </span>
           </div>
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 20.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold"
+                >Linkbuilding Dashboard</span
+              >
             </span>
           </div>
           <div class="col-sm-3">
             <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
+              class="border py-3 rounded-2 d-flex justify-content-center align-items-center"
             >
               <img
-                src="./assets/Group 3.png"
+                src="./assets/Group 21.png"
                 style="width: 18px; height: 18px"
                 alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
-            </span>
-          </div>
-          <div class="col-sm-3">
-            <span
-              class="border py-3 px-5 rounded-2 d-flex justify-content-center align-items-center"
-            >
-              <img
-                src="./assets/Group 3.png"
-                style="width: 18px; height: 18px"
-                alt=""
-              /><span class="ms-2 ads-btn">Quality Metrics</span>
+              /><span class="ms-2 ads-btn fw-semibold"
+                >Guarantees & safety</span
+              >
             </span>
           </div>
         </div>
@@ -331,9 +419,11 @@
         <div class="">
           <div class="row">
             <div class="col-lg-6 my-5">
-              <div class="my-1 ">
-                <h2 class="fs-1 raleway">Automated Backlinks <br>
-                  Placement and Deletion</h2>
+              <div class="my-1">
+                <h2 class="fs-2 raleway fw-semibold">
+                  Automated Backlinks <br />
+                  Placement and Deletion
+                </h2>
                 <div class="mt-3">
                   <img
                     src="./assets/n1.png"
@@ -358,7 +448,9 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="d-lg-flex d-none justify-content-center align-items-center ">
+              <div
+                class="d-lg-flex d-none justify-content-center align-items-center"
+              >
                 <img
                   src="./assets/setting.png"
                   style="width: 300px; height: 300px"
@@ -371,21 +463,23 @@
       </section>
 
       <!-- Slider  -->
-      <div id="customCarousel" class="carousel slide container py-5" data-bs-ride="carousel">
+      <div
+        id="customCarousel"
+        class="carousel slide container py-5"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
               <div class="col-md-6 carousel-content">
-                <div class="my-5">
+                <div class="mt-5">
                   <h2 class="fs-1 raleway">
                     Automated Backlinks 2 <br />
                     Placement and Deletion
                   </h2>
-                  <h5 class="fw-light fs-4">
-                    Lorem ipsum dolor sit amet.2
-                  </h5>
+                  <h5 class="fw-light fs-4">Lorem ipsum dolor sit amet.2</h5>
                 </div>
-                <div class="">
+                <div class="mt-3">
                   <button class="px-3 py-2 solid-btn" type="submit">
                     Visit Now
                   </button>
@@ -403,16 +497,14 @@
           <div class="carousel-item">
             <div class="row">
               <div class="col-md-6 carousel-content">
-                <div class="my-5">
+                <div class="mt-5">
                   <h2 class="fs-1 raleway">
-                    Automated Backlinks <br />
+                    Automated Backlinks 2 <br />
                     Placement and Deletion
                   </h2>
-                  <h5 class="fw-light fs-4">
-                    Lorem ipsum dolor sit amet.
-                  </h5>
+                  <h5 class="fw-light fs-4">Lorem ipsum dolor sit amet.2</h5>
                 </div>
-                <div class="">
+                <div class="mt-3">
                   <button class="px-3 py-2 solid-btn" type="submit">
                     Visit Now
                   </button>
@@ -427,7 +519,6 @@
               </div>
             </div>
           </div>
-          <!-- Add more carousel items as needed -->
         </div>
         <button
           class="carousel-control-prev"
@@ -450,33 +541,106 @@
       </div>
 
       <!-- counter  -->
-      <div class="container">
+      <div class="container shadow-sm">
         <div class="row">
           <div class="four col-md-3">
-            <div class="counter-box colored">
-              <i class="fa-solid fa-certificate"></i>
-              <span class="counter">22</span>
-              <p>Experience Years</p>
+            <div class="counter-box d-flex g-5">
+              <img
+                src="./assets/Group 35.png"
+                style="width: 28px; height: 28px; background-size: cover"
+                alt="icon"
+              />
+              <div class="ms-2">
+                <div class="d-flex gap-2">
+                  <span class="counter c-poppins">32</span>
+                  <img
+                    src="./assets/Group 22.png"
+                    style="width: 12px; height: 12px; margin-top: 15px"
+                    alt="icon"
+                  />
+                </div>
+                <p class="text-dark my-2">Experience Years</p>
+                <img
+                  src="./assets/bar.png"
+                  style="width: 100%; height: 4px"
+                  alt="icon"
+                />
+              </div>
             </div>
           </div>
           <div class="four col-md-3">
-            <div class="counter-box">
-              <i class="fa-solid fa-circle-check"></i>
-              <span class="counter">120</span>
-              <p>Succesful Project</p>
+            <div class="counter-box d-flex g-5">
+              <img
+                src="./assets/Group 32.png"
+                style="width: 28px; height: 28px; background-size: cover"
+                alt="icon"
+              />
+              <div class="ms-2">
+                <div class="d-flex gap-2">
+                  <span class="counter c-poppins">220</span>
+                  <img
+                    src="./assets/Group 22.png"
+                    style="width: 12px; height: 12px; margin-top: 15px"
+                    alt="icon"
+                  />
+                </div>
+                <p class="text-dark my-2">Successful Projects</p>
+                <img
+                  src="./assets/bar.png"
+                  style="width: 100%; height: 4px"
+                  alt="icon"
+                />
+              </div>
             </div>
           </div>
           <div class="four col-md-3">
-            <div class="counter-box">
-              <i class="fa-solid fa-user"></i> <span class="counter">289</span>
-              <p>Happy Customer</p>
+            <div class="counter-box d-flex g-5">
+              <img
+                src="./assets/Group 32.png"
+                style="width: 28px; height: 28px; background-size: cover"
+                alt="icon"
+              />
+              <div class="ms-2">
+                <div class="d-flex gap-2">
+                  <span class="counter c-poppins">150</span>
+                  <img
+                    src="./assets/Group 22.png"
+                    style="width: 12px; height: 12px; margin-top: 15px"
+                    alt="icon"
+                  />
+                </div>
+                <p class="text-dark my-2">Happy customers</p>
+                <img
+                  src="./assets/bar.png"
+                  style="width: 100%; height: 4px"
+                  alt="icon"
+                />
+              </div>
             </div>
           </div>
           <div class="four col-md-3">
-            <div class="counter-box">
-              <i class="fa-solid fa-people-group"></i>
-              <span class="counter">45</span>
-              <p>Team Members</p>
+            <div class="counter-box d-flex g-5">
+              <img
+                src="./assets/Group 34.png"
+                style="width: 28px; height: 28px; background-size: contain"
+                alt="icon"
+              />
+              <div class="ms-2">
+                <div class="d-flex gap-2">
+                  <span class="counter c-poppins">22</span>
+                  <img
+                    src="./assets/Group 22.png"
+                    style="width: 12px; height: 12px; margin-top: 15px"
+                    alt="icon"
+                  />
+                </div>
+                <p class="text-dark my-2">Team Members</p>
+                <img
+                  src="./assets/bar.png"
+                  style="width: 100%; height: 4px"
+                  alt="icon"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -485,7 +649,7 @@
       <section class="mt-5 py-5 newslater-main">
         <div>
           <h2 class="my-2 fs-3 text-center px-1 fw-semibold raleway c-heading">
-            Lorem, ipsum dolor sit amet consectetur W dolor  consectetur
+            Lorem, ipsum dolor sit amet consectetur W dolor consectetur
             adipisicing elit.
           </h2>
         </div>
@@ -558,7 +722,7 @@
         <div class="row">
           <div class="col-lg-6 col-sm-12">
             <h1 class="text-white fw-light">Get In Touch</h1>
-            <div class="d-lg-flex gap-5">
+            <div class="d-lg-flex gap-5 raleway">
               <div>
                 <i class="fa-solid fa-phone" style="color: white"></i>
                 <span class="text-white">+1 (415) 555‑0132</span>
@@ -570,28 +734,36 @@
             </div>
             <div class="d-flex gap-3 mt-2">
               <div>
-                <i
-                  class="fa-brands fa-facebook-f p-2 social-icons"
-                  style="color: white"
-                ></i>
+                <a href="#">
+                  <i
+                    class="fa-brands fa-facebook-f p-2 social-icons"
+                    style="color: white"
+                  ></i>
+                </a>
               </div>
               <div>
-                <i
-                  class="fa-brands fa-instagram p-2 social-icons"
-                  style="color: white"
-                ></i>
+                <a href="#">
+                  <i
+                    class="fa-brands fa-instagram p-2 social-icons"
+                    style="color: white"
+                  ></i>
+                </a>
               </div>
               <div>
-                <i
-                  class="fa-brands fa-linkedin p-2 social-icons"
-                  style="color: white"
-                ></i>
+                <a href="#">
+                  <i
+                    class="fa-brands fa-linkedin p-2 social-icons"
+                    style="color: white"
+                  ></i
+                ></a>
               </div>
               <div>
-                <i
-                  class="fa-brands fa-x-twitter p-2 social-icons"
-                  style="color: white"
-                ></i>
+                <a href="#">
+                  <i
+                    class="fa-brands fa-x-twitter p-2 social-icons"
+                    style="color: white"
+                  ></i>
+                </a>
               </div>
             </div>
           </div>
@@ -651,7 +823,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    
+
     <script>
       // Auto slide every 2 seconds
       $("#customCarousel").carousel({
@@ -660,6 +832,5 @@
     </script>
 
     <script src="index.js"></script>
-    
   </body>
 </html>
