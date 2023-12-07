@@ -30,7 +30,9 @@
 .fs-smaller{
   font-size: small!important;
 }
-
+.fs-smaller-xsmall{
+  font-size: x-small!important;
+}
 
 .primary-color {
   color: var(--primary-color) !important;
@@ -319,7 +321,7 @@
 
   /* Modal  */
   .form-check-input {
-    border-radius: 0!important;
+    border-radius: 3px!important;
 }
   .form-check-input:checked {
     background-color: var(--primaryred-color)!important;
